@@ -19,7 +19,7 @@ $processor = new  Processor_File($inputFile, $outputFile);
 
 $processor->loadInputValues();
 $processor->processInput(new Luhn);
-$processor->writeOutput($outputFile);
+$processor->writeOutput();
 
 echo $processor->getSuccessMessage();
 exit;
