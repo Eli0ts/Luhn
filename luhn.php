@@ -11,9 +11,11 @@
 use Luhn\Handler\Luhn;
 use Luhn\Processor\Processor_File;
 
+require 'vendor/autoload.php';
+
 $inputFile = $argv[1] ?? null;
 $outputFile = $argv[2] ?? null;
-$processor = new Processor_File($inputFile, $outputFile);
+$processor = new  Processor_File($inputFile, $outputFile);
 
 $processor->loadInputValues();
 $processor->processInput(new Luhn);

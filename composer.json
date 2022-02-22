@@ -4,9 +4,7 @@
         "name": "Kev"
     }],
     "autoload": {
-        "psr-4": {
-            "Luhn\\": ".src/"
-        }
+        "psr-4": { "Luhn\\": "src/" }
     },
     "require": {}
 }

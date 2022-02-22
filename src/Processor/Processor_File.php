@@ -22,7 +22,7 @@ class Processor_File extends AbstractProcessor
         }
 
         if (\is_null($outputFile)) {
-            $this->outputFile = dirname(dirname(__FILE__)) . 'output.txt';
+            $this->outputFile = 'output.txt';
         }
 
         $this->inputFile = $inputFile;
