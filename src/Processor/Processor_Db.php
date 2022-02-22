@@ -1,5 +1,7 @@
 <?php
 
+namespace Luhn\Processor;
+
 class Processor_Db extends AbstractProcessor
 {
     protected object $dbConn;
@@ -7,7 +9,7 @@ class Processor_Db extends AbstractProcessor
     protected array $outputValues = [];
 
 
-    public function __construct(object $dbConn)
+    public function __construct(object $dbConn, string $inputsTableName)
     {
         $this->dbConn = $dbConn;
     }

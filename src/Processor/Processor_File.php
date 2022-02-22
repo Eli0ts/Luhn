@@ -1,5 +1,7 @@
 <?php
 
+namespace Luhn\Processor;
+
 class Processor_File extends AbstractProcessor
 {
     protected string $inputFile;
@@ -9,10 +11,10 @@ class Processor_File extends AbstractProcessor
     protected array $outputValues = [];
 
 
-    public function __construct(?string $inputFile, ?string $outputFile)
+    public function __construct($inputFile, $outputFile)
     {
-        if (\is_null($inputFile)) {
-            throw new \Exception("You must pass the input file path as a parameter");
+        if (\is_null($inputFile) || !\is_string($inputFile)) {
+            throw new \Exception("You must pass the input file path as a parameter in string format");
         }
 
         if (!\file_exists($inputFile)) {
@@ -20,7 +22,7 @@ class Processor_File extends AbstractProcessor
         }
 
         if (\is_null($outputFile)) {
-            $this->outputFile = dirname(dirname(__FILE__)) . '/files/output.txt';
+            $this->outputFile = dirname(dirname(__FILE__)) . 'output.txt';
         }
 
         $this->inputFile = $inputFile;

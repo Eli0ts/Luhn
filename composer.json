@@ -1,0 +1,12 @@
+{
+    "name": "kev/luhn",
+    "authors": [{
+        "name": "Kev"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Luhn\\": ".src/"
+        }
+    },
+    "require": {}
+}

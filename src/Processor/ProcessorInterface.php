@@ -1,5 +1,9 @@
 <?php
 
+namespace Luhn\Processor;
+
+use Luhn\Handler\LuhnInterface;
+
 interface ProcessorInterface
 {
     /**

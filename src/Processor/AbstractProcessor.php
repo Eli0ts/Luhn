@@ -1,5 +1,9 @@
 <?php
 
+namespace Luhn\Processor;
+
+use Luhn\Handler\LuhnInterface;
+
 abstract class AbstractProcessor implements ProcessorInterface
 {
     protected array $inputValues;

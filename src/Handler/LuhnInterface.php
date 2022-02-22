@@ -1,5 +1,7 @@
 <?php
 
+namespace Luhn\Handler;
+
 interface LuhnInterface
 {
     /**

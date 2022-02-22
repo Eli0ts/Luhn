@@ -1,5 +1,7 @@
 <?php
 
+namespace Luhn\Handler;
+
 class Luhn implements LuhnInterface
 {
     private const ALLOWED_CHARACTERS = 9;
